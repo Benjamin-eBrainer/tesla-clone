@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import { MenuBookSharp } from '@mui/icons-material';
+import MenuIcon from '@mui/icons-material/Menu';
 
 const Container = styled.div `
     top: 0;
@@ -40,7 +40,7 @@ const RightMenu = styled.div `
 }
 `
 
-const CustomMenu = styled(MenuBookSharp)
+const CustomMenu = styled(MenuIcon)
 `
     cursor: pointer;
 `
