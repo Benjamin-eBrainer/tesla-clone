@@ -17,7 +17,7 @@ const ItemText = styled.div `
     text-align: center;
     padding-top: 35vh;
     opacity: 0;
-    transition: all 3.6s;
+    transition: all 1.6s;
     
     &.item__visible {
         padding-top: 15vh;
@@ -31,7 +31,7 @@ const ButtonGroup = styled.div `
     display: flex;
     margin-bottom: 75px;
     opacity: 0;
-    transition: all 3.6s;
+    transition: all 1.6s;
     
     &.button__visible {
         margin-bottom: 30px;
