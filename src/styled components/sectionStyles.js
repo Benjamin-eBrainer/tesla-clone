@@ -10,19 +10,34 @@ const Wrap = styled.div `
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: ${props => `url('/images/${props.bgImage}')`};
+    background-image: ${props => `url('/images/${props.bgimage}')`};
 `
 
 const ItemText = styled.div `
-    padding-top: 15vh;
     text-align: center;
+    padding-top: 35vh;
+    opacity: 0;
+    transition: all 3.6s;
+    
+    &.item__visible {
+        padding-top: 15vh;
+        opacity: 1;
+    }
 `
 
 const Buttons = styled.div ``
 
 const ButtonGroup = styled.div `
     display: flex;
-    margin-bottom: 30px;
+    margin-bottom: 75px;
+    opacity: 0;
+    transition: all 3.6s;
+    
+    &.button__visible {
+        margin-bottom: 30px;
+        opacity: 1;
+    }
+
     @media (max-width: 768px) {
         flex-direction: column;
     }
