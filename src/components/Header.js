@@ -1,12 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
   Container,
   Menu,
   RightMenu,
-  CustomMenu
+  CustomMenu,
+  BurgerNav,
+  CloseWrapper,
+  CustomClose
 } from '../styled components/headerStyles'
 
 function Header() {
+  const [burgerStatus, setBurgerStatus] = useState(false);
+
   return (
     <Container>
       <a href="">
@@ -21,8 +26,21 @@ function Header() {
       <RightMenu>
         <a href="#">Shop</a>
         <a href="#">Tesla Account</a>
-        <CustomMenu />
+        <CustomMenu onClick={() => setBurgerStatus(true)} />
       </RightMenu>
+      <BurgerNav show={burgerStatus}>
+        <CloseWrapper>
+          <CustomClose onClick={() => setBurgerStatus(false)} />
+        </CloseWrapper>
+        <li><a href="#">Existing Inventory</a></li>
+        <li><a href="#">Used Inventory</a></li>
+        <li><a href="#">Trade-in</a></li>
+        <li><a href="#">Cybertruck</a></li>
+        <li><a href="#">Roadaster</a></li>
+        <li><a href="#">Existing Inventory</a></li>
+        <li><a href="#">Existing Inventory</a></li>
+        <li><a href="#">Existing Inventory</a></li>
+      </BurgerNav>
     </Container>
   )
 }

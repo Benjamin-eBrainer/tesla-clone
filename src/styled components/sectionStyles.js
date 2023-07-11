@@ -15,7 +15,7 @@ const Wrap = styled.div `
 
 const ItemText = styled.div `
     text-align: center;
-    padding-top: 35vh;
+    padding-top: 25vh;
     opacity: 0;
     transition: all 1.6s;
     

@@ -1,5 +1,6 @@
 import { styled } from "styled-components";
 import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 
 const Container = styled.div `
     top: 0;
@@ -11,6 +12,7 @@ const Container = styled.div `
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
+    z-index: 1;
 `
 
 const Menu = styled.div `
@@ -45,9 +47,48 @@ const CustomMenu = styled(MenuIcon)
     cursor: pointer;
 `
 
+const BurgerNav = styled.div `
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    padding: 20px;
+    background: white;
+    z-index: 16;
+    list-style: none;
+    transform: ${props => props.show ? 'translateX(0)' : 'translateX(100%)'};
+    transition: transform 0.2s;
+
+    li {
+        padding: 15px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, .2);
+
+        a {
+            font-weight: 600;
+        }
+    }
+`
+
+const CloseWrapper = styled.div `
+    display: flex;
+    justify-content: flex-end;
+`
+
+const CustomClose = styled(CloseIcon)
+`
+    cursor: pointer;
+`
+
 export {
     Container,
     Menu,
     RightMenu,
-    CustomMenu
+    CustomMenu,
+    BurgerNav,
+    CloseWrapper,
+    CustomClose
 };
